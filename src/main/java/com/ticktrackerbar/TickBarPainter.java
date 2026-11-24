@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2026, Tick Tracker Bar contributors
+ * Copyright (c) 2026, ETPhone12
  * All rights reserved. Licensed under the BSD 2-Clause License, see LICENSE.
  */
 package com.ticktrackerbar;

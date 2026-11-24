@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2026, Tick Tracker Bar contributors
+ * Copyright (c) 2026, ETPhone12
  * All rights reserved. Licensed under the BSD 2-Clause License, see LICENSE.
  */
 package com.ticktrackerbar;
@@ -43,7 +43,7 @@ import net.runelite.client.util.Text;
 	description = "A tick bar that resets every game tick (or every 2 or 3 ticks), marks your clicks and tracks your on-tick streak",
 	tags = {"tick", "timing", "1t", "2t", "3t", "manipulation", "prayer", "flick", "trainer", "streak"}
 )
-public class TickTrackerPlugin extends Plugin
+public class TickTrackerBarPlugin extends Plugin
 {
 	static final String WINDOW_LOCATION_KEY = "windowLocation";
 
@@ -69,7 +69,7 @@ public class TickTrackerPlugin extends Plugin
 	private OverlayManager overlayManager;
 
 	@Inject
-	private TickTrackerOverlay overlay;
+	private TickTrackerBarOverlay overlay;
 
 	@Inject
 	private KeyManager keyManager;

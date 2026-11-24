@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2026, Tick Tracker Bar contributors
+ * Copyright (c) 2026, ETPhone12
  * All rights reserved. Licensed under the BSD 2-Clause License, see LICENSE.
  */
 package com.ticktrackerbar;
@@ -17,16 +17,16 @@ import net.runelite.client.ui.overlay.OverlayPosition;
  * and its menu ("Reset stats" and "Pop out") shows on Shift + right-click. RuneLite only draws overlays
  * while you're logged in.
  */
-class TickTrackerOverlay extends Overlay
+class TickTrackerBarOverlay extends Overlay
 {
 	private static final String TARGET = "Tick tracker";
 
-	private final TickTrackerPlugin plugin;
+	private final TickTrackerBarPlugin plugin;
 	private final TickTrackerConfig config;
 	private final TickBarPainter painter = new TickBarPainter();
 
 	@Inject
-	TickTrackerOverlay(TickTrackerPlugin plugin, TickTrackerConfig config)
+	TickTrackerBarOverlay(TickTrackerBarPlugin plugin, TickTrackerConfig config)
 	{
 		super(plugin);
 		this.plugin = plugin;

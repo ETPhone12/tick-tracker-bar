@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2026, Tick Tracker Bar contributors
+ * Copyright (c) 2026, ETPhone12
  * All rights reserved. Licensed under the BSD 2-Clause License, see LICENSE.
  */
 package com.ticktrackerbar;
@@ -296,7 +296,7 @@ public class TickTrackerWindowTest
 	{
 		SwingUtilities.invokeAndWait(() ->
 		{
-			assertFalse("no RuneLite window yet", TickTrackerPlugin.canHoldPopOut(null));
+			assertFalse("no RuneLite window yet", TickTrackerBarPlugin.canHoldPopOut(null));
 			JFrame hidden = new JFrame();
 			// Stands in for RuneLite's window once it's shown; the test never puts a window on screen.
 			JFrame shown = new JFrame()
@@ -309,14 +309,14 @@ public class TickTrackerWindowTest
 			};
 			try
 			{
-				assertFalse("not shown yet", TickTrackerPlugin.canHoldPopOut(hidden));
-				assertTrue(TickTrackerPlugin.canHoldPopOut(shown));
+				assertFalse("not shown yet", TickTrackerBarPlugin.canHoldPopOut(hidden));
+				assertTrue(TickTrackerBarPlugin.canHoldPopOut(shown));
 				shown.setExtendedState(Frame.ICONIFIED);
-				assertFalse("minimized", TickTrackerPlugin.canHoldPopOut(shown));
+				assertFalse("minimized", TickTrackerBarPlugin.canHoldPopOut(shown));
 				shown.setExtendedState(Frame.ICONIFIED | Frame.MAXIMIZED_BOTH);
-				assertFalse("minimized from full screen", TickTrackerPlugin.canHoldPopOut(shown));
+				assertFalse("minimized from full screen", TickTrackerBarPlugin.canHoldPopOut(shown));
 				shown.setExtendedState(Frame.MAXIMIZED_BOTH);
-				assertTrue("full screen", TickTrackerPlugin.canHoldPopOut(shown));
+				assertTrue("full screen", TickTrackerBarPlugin.canHoldPopOut(shown));
 			}
 			finally
 			{
