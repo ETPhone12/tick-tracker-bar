@@ -1,0 +1,5 @@
+# Windows scripts need Windows line endings, the Unix script needs Unix ones.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+gradlew text eol=lf
+*.jar binary
